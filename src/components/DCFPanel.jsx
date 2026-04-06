@@ -1,10 +1,10 @@
 import React from 'react'
 import { Bar } from 'react-chartjs-2'
-import { Chart, CategoryScale, LinearScale, BarElement, LineElement, PointElement, Tooltip, Filler } from 'chart.js'
+import { Chart, CategoryScale, LinearScale, BarController, BarElement, LineController, LineElement, PointElement, Tooltip, Filler } from 'chart.js'
 import { Card, SectionTitle, MetricCard, Badge } from './UI'
 import { fmt, fmtPrice, fmtPct, ACTUALS } from '../lib/dcf'
 
-Chart.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement, Tooltip, Filler)
+Chart.register(CategoryScale, LinearScale, BarController, BarElement, LineController, LineElement, PointElement, Tooltip, Filler)
 
 export default function DCFPanel({ result }) {
   const { rows, sumPvFcf, pvTv, ev, pricePerShare, upside } = result
